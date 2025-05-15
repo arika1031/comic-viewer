@@ -47,14 +47,15 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".swiper", {
-      loop: false,
-      navigation: {
-        nextEl: ".swiper-button-prev",  // ←逆にして右→左へ
-        prevEl: ".swiper-button-next"
-      }
-    });
-  </script>
+ <script>
+  const swiper = new Swiper(".swiper", {
+    loop: false,
+    initialSlide: 7, // ←ここがポイント！（0から数えるので8ページ目なら7）
+    navigation: {
+      nextEl: ".swiper-button-prev",  // ←右から左に進むため逆にしてます
+      prevEl: ".swiper-button-next"
+    }
+  });
+</script>
 </body>
 </html>
