@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>漫画ビューア</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <style>
+    body {
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: sans-serif;
+    }
+    .swiper {
+      width: 100%;
+      max-width: 800px;
+      height: 100vh;
+      margin: 0 auto;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- ←←← ここに漫画のページを逆順に並べます！ -->
+      <div class="swiper-slide"><img src="20250118_008.png" alt="page 4"></div>
+      <div class="swiper-slide"><img src="20250118_007.png" alt="page 3"></div>
+      <div class="swiper-slide"><img src="20250118_006.png" alt="page 2"></div>
+      <div class="swiper-slide"><img src="20250118_005.png" alt="page 1"></div> 
+      <div class="swiper-slide"><img src="20250118_004.png" alt="page 4"></div>
+      <div class="swiper-slide"><img src="20250118_003.png" alt="page 3"></div>
+      <div class="swiper-slide"><img src="20250118_002.png" alt="page 2"></div>
+      <div class="swiper-slide"><img src="20250118_001.png" alt="page 1"></div>
+    </div>
+
+    <!-- ナビゲーション矢印 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: false,
+      navigation: {
+        nextEl: ".swiper-button-prev",  // ←逆にして右→左へ
+        prevEl: ".swiper-button-next"
+      }
+    });
+  </script>
+</body>
+</html>
