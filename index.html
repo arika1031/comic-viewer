@@ -38,6 +38,7 @@
     const swiper = new Swiper(".swiper", {
       loop: false,
       initialSlide: 7,　// ←ここがポイント！（0から数えるので8ページ目なら7）
+      autoHeight: true,  
       navigation: {
         nextEl: ".swiper-button-prev",　 // ←右から左に進むため逆
         prevEl: ".swiper-button-next"
